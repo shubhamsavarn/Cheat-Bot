@@ -2,8 +2,8 @@ name: Cheat-Bot Daily
 
 on:
   schedule:
-    # 00:30 UTC = 6:00 AM IST — 30 mins after LeetCode rolls the new daily
-    - cron: "30 0 * * *"
+    # 14:30 UTC = 8:00 PM IST
+    - cron: "30 14 * * *"
   workflow_dispatch: {}
 
 concurrency:
@@ -84,19 +84,10 @@ jobs:
         if: failure() && steps.bot.outcome == 'failure'
         run: |
           echo ""
-          echo "╔══════════════════════════════════════════════════════════╗"
-          echo "║                  COOKIE REFRESH NEEDED                  ║"
-          echo "╠══════════════════════════════════════════════════════════╣"
-          echo "║  Your LeetCode session cookies have expired.             ║"
-          echo "║                                                          ║"
-          echo "║  Run this on your local machine:                         ║"
-          echo "║                                                          ║"
-          echo "║    python scripts/push_cookies_to_github.py --trigger    ║"
-          echo "║                                                          ║"
-          echo "║  This will:                                              ║"
-          echo "║    1. Pull fresh cookies from your browser               ║"
-          echo "║    2. Push them to GitHub secrets automatically          ║"
-          echo "║    3. Re-trigger this workflow                           ║"
-          echo "╚══════════════════════════════════════════════════════════╝"
+          echo "COOKIE REFRESH NEEDED"
+          echo "Your LeetCode session cookies may have expired."
+          echo "Copy fresh LEETCODE_SESSION and csrftoken values from your browser"
+          echo "(DevTools > Application > Cookies > https://leetcode.com)"
+          echo "and update the LEETCODE_SESSION and LEETCODE_CSRFTOKEN repo secrets."
           echo ""
           exit 1
