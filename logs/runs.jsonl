@@ -16,3 +16,4 @@
 {"ts": "2026-11-22T20:47:47.305343+00:00", "account": "default", "date": "2026-11-22", "problem": "Check if All A's Appears Before All B's", "slug": "check-if-all-as-appears-before-all-bs", "status": "AuthFailed"}
 {"ts": "2026-11-24T01:47:23.011336+00:00", "account": "default", "date": "2026-11-24", "problem": "Maximum Subarray With Equal Products", "slug": "maximum-subarray-with-equal-products", "status": "AuthFailed"}
 {"ts": "2026-11-24T23:35:32.843623+00:00", "account": "default", "date": "2026-11-24", "problem": "Maximum Subarray With Equal Products", "slug": "maximum-subarray-with-equal-products", "status": "AuthFailed"}
+{"ts": "2026-11-25T23:12:26.196615+00:00", "account": "default", "date": "2026-11-25", "problem": "Smallest Unique Subarray", "slug": "smallest-unique-subarray", "status": "AuthFailed"}
